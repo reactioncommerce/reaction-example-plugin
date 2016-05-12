@@ -51,6 +51,12 @@ Package.onUse(function (api) {
 
   // Server files
   api.addFiles("server/register.js", "server");
+  api.addFiles("server/load.js", "server");
+
+  // Private fixture data
+  api.addAssets("private/data/Products.json", "server");
+  api.addAssets("private/data/Shops.json", "server");
+  api.addAssets("private/data/Tags.json", "server");
 
 
   // Client files
