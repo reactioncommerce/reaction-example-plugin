@@ -1,0 +1,13 @@
+<template name="coreLayoutBeesknees">
+  <main role="main" id="main">
+    <span id="layout-alerts">{{> inlineAlerts}}</span>
+    {{#if hasPermission 'guest'}}
+      <!-- begin template region -->
+      {{> Template.dynamic template=template}}
+      <!-- end template region -->
+    {{/if}}
+
+    <footer class="reaction-navigation-footer footer-default">{{> Template.dynamic template=layoutFooter}}</footer>
+  </main>
+
+</template>
