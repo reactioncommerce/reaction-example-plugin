@@ -1,4 +1,17 @@
 <template name="coreLayoutBeesknees">
+{{#if hasDashboardAccess}}
+  {{> coreAdminLayout}}
+{{else}}
+    <nav class="reaction-navigation-header">
+      <!-- begin layoutHeader -->
+      {{> Template.dynamic template=layoutHeader}}
+      <!-- end layoutHeader -->
+    </nav>
+
+    <nav class="reaction-cart-drawer">
+      {{>cartDrawer}}
+    </nav>
+
   <main role="main" id="main">
     <span id="layout-alerts">{{> inlineAlerts}}</span>
     {{#if hasPermission 'guest'}}
@@ -10,4 +23,5 @@
     <footer class="reaction-navigation-footer footer-default">{{> Template.dynamic template=layoutFooter}}</footer>
   </main>
 
+{{/if}}
 </template>

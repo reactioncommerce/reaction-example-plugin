@@ -12,7 +12,7 @@ ReactionCore.registerPackage({
     enabled: true,
     structure: {
       template: "productsLanding",
-      layoutHeader: "layoutHeader",
+      layoutHeader: "layoutHeaderBeesknees",
       layoutFooter: "layoutFooter",
       notFound: "productNotFound",
       dashboardHeader: "",

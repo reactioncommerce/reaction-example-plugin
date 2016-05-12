@@ -3039,7 +3039,7 @@
         }
       }
     },
-    "name": "Bee's Knees Organic Infant Clothing",
+    "name": "BeesKnees",
     "taxes": [
       {
         "taxesIncluded": null,
@@ -3073,7 +3073,7 @@
         "company": "Bee's Knees",
         "fullName": "Bee's Knees Organic Infant Clothing",
         "address1": "123 Main St.",
-        "address2": "",
+        "address2": "Warehouse #7",
         "city": "Los Angeles",
         "region": "CA",
         "postal": "90046",
