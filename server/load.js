@@ -1,3 +1,20 @@
+function modifyCheckoutWorkflow() {
+  // Replace checkoutReview with our custom Template
+  ReactionCore.Collections.Packages.update({
+    "name": "reaction-checkout",
+    "layout": {
+      "$elemMatch": {
+        "template": "checkoutReview"
+      }
+    }
+  }, {
+    "$set": {
+      "layout.$.template": "checkoutReviewBeesknees",
+      "layout.$.label": "Review Order"
+    }
+  });
+}
+
 /**
  * Hook to setup core additional imports during ReactionCore init (shops process first)
  */
@@ -11,5 +28,9 @@ if (ReactionCore && ReactionCore.Hooks) {
     ReactionImport.fixture().process(Assets.getText("private/data/Products.json"), ["title"], ReactionImport.load);
     ReactionImport.fixture().process(Assets.getText("private/data/Tags.json"), ["name"], ReactionImport.load);
     ReactionImport.flush();
+  });
+
+  ReactionCore.Hooks.Events.add("afterCoreInit", () => {
+    modifyCheckoutWorkflow();
   });
 }
