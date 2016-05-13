@@ -1,25 +1,65 @@
 [{
-  "slug": "example-product",
-  "name": "example-product",
-  "isTopLevel": false,
-  "updatedAt": {
-    "$date": "2014-04-12T08:17:20.576-0700"
-  },
-  "createdAt": {
-    "$date": "2014-04-12T08:17:20.576-0700"
-  },
-  "_id": "cseCBSSrJ3t8HQSNP",
-  "shopId": "J8Bhq3uTtdgwZx3rz"
-}, {
-  "slug": "shop",
-  "name": "Shop",
-  "isTopLevel": true,
-  "updatedAt": {
-    "$date": "2014-04-09T13:23:57.412-0700"
-  },
-  "createdAt": {
-    "$date": "2014-04-09T13:23:57.412-0700"
-  },
-  "_id": "rpjCvTBGjhBi2xdro",
-  "shopId": "J8Bhq3uTtdgwZx3rz"
+	"_id": "GenZZBB6DnP6kbWKu",
+	"slug": "two-piece",
+	"name": "two-piece",
+	"isTopLevel": false,
+	"shopId": "J8Bhq3uTtdgwZx3rz",
+	"updatedAt": {
+		"$date": "2016-05-12T06:06:48.167Z"
+	},
+	"createdAt": {
+		"$date": "2016-05-12T06:06:48.175Z"
+	}
+},
+{
+	"_id": "XMubvFRKnqA44ZKT3",
+	"slug": "one-piece",
+	"name": "one-piece",
+	"isTopLevel": false,
+	"shopId": "J8Bhq3uTtdgwZx3rz",
+	"updatedAt": {
+		"$date": "2016-05-12T06:20:33.870Z"
+	},
+	"createdAt": {
+		"$date": "2016-05-12T06:20:33.876Z"
+	}
+},
+{
+	"_id": "fThYz6ZhexfMP95KR",
+	"slug": "toddler",
+	"name": "toddler",
+	"isTopLevel": false,
+	"shopId": "J8Bhq3uTtdgwZx3rz",
+	"updatedAt": {
+		"$date": "2016-05-12T06:00:03.475Z"
+	},
+	"createdAt": {
+		"$date": "2016-05-12T06:00:03.480Z"
+	}
+},
+{
+	"_id": "rpjCvTBGjhBi2xdro",
+	"name": "Shop",
+	"slug": "shop",
+	"isTopLevel": true,
+	"updatedAt": {
+		"$date": "2014-04-09T20:23:57.412Z"
+	},
+	"createdAt": {
+		"$date": "2014-04-09T20:23:57.412Z"
+	},
+	"shopId": "J8Bhq3uTtdgwZx3rz"
+},
+{
+	"_id": "zK5JyqqWoRGgCkTYt",
+	"slug": "newborn",
+	"name": "newborn",
+	"isTopLevel": false,
+	"shopId": "J8Bhq3uTtdgwZx3rz",
+	"updatedAt": {
+		"$date": "2016-05-12T06:00:00.645Z"
+	},
+	"createdAt": {
+		"$date": "2016-05-12T06:00:00.650Z"
+	}
 }]
