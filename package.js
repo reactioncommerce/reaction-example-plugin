@@ -81,5 +81,7 @@ Package.onUse(function (api) {
   api.addFiles("client/templates/products/productList/productList.html", "client");
   api.addFiles("client/templates/products/productList/productList.js", "client");
 
+  api.addFiles("client/templates/static/aboutus.html", "client");
+
 
 });

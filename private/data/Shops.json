@@ -3070,7 +3070,7 @@
     ],
     "addressBook": [
       {
-        "company": "Bee's Knees",
+        "company": "BeesKnees",
         "fullName": "Bee's Knees Organic Infant Clothing",
         "address1": "123 Main St.",
         "address2": "Warehouse #7",
@@ -3091,7 +3091,8 @@
       "tag",
       "index",
       "cart/checkout",
-      "cart/completed"
+      "cart/completed",
+      "about"
     ],
     "defaultRoles": [
       "account/profile",
@@ -3100,7 +3101,8 @@
       "tag",
       "index",
       "cart/checkout",
-      "cart/completed"
+      "cart/completed",
+      "about"
     ]
   }
 ]

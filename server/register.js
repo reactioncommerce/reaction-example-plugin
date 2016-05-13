@@ -4,6 +4,14 @@ ReactionCore.registerPackage({
   name: "beesknees",
   icon: "fa fa-vine",
   autoEnable: true,
+  registry: [
+    {
+      route: "/about",
+      name: "about",
+      template: "aboutUs",
+      workflow: "coreWorkflow"
+    }
+  ],
   layout: [{
     layout: "coreLayoutBeesknees",
     workflow: "coreWorkflow",
