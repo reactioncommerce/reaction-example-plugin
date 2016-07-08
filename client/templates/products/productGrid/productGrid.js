@@ -1,3 +1,9 @@
+import { Template } from "meteor/templating";
+import { Session } from "meteor/session";
+import { Reaction } from "/client/api";
+import { i18next } from "/client/api";
+
+
 /**
  * productGrid helpers
  */
@@ -31,7 +37,7 @@ Template.productGridBeesknees.events({
         return _.contains(selectedProducts, product._id);
       });
 
-      ReactionCore.showActionView({
+      Reaction.showActionView({
         label: i18next.t("productDetailEdit.productSettings"),
         template: "productSettings",
         type: "product",

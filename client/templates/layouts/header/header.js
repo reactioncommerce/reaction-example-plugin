@@ -1,3 +1,8 @@
+import "./header.html";
+import { Template } from "meteor/templating";
+import { Reaction } from "/client/api";
+import { Tags } from "/lib/collections";
+
 /**
  * layoutHeader events
  */
@@ -30,7 +35,7 @@ Template.layoutHeaderBeesknees.helpers({
     const instance = Template.instance();
     let tags = [];
 
-    tags = ReactionCore.Collections.Tags.find({
+    tags = Tags.find({
       isTopLevel: true
     }, {
       sort: {
@@ -40,7 +45,7 @@ Template.layoutHeaderBeesknees.helpers({
 
     return {
       name: "coreHeaderNavigation",
-      editable: ReactionCore.hasAdminAccess(),
+      editable: Reaction.hasAdminAccess(),
       tags: tags,
       onToggleMenu(callback) {
         // Register the callback

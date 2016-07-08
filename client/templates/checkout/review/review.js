@@ -1,8 +1,11 @@
-/**
-* review status
-* trigger checkoutPayment step on template checkoutReview render
-*/
+import { Meteor } from "meteor/meteor";
+import { Template } from "meteor/templating";
 
-Template.checkoutReviewBeesknees.onRendered(function () {
+/**
+ * review status
+ * trigger checkoutPayment step on template checkoutReview render
+ */
+
+Template.checkoutReview.onRendered(function () {
   Meteor.call("workflow/pushCartWorkflow", "coreCartWorkflow", "checkoutReview");
 });
