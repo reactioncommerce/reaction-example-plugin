@@ -1,3 +1,4 @@
+import "./review.html";
 import { Meteor } from "meteor/meteor";
 import { Template } from "meteor/templating";
 
@@ -6,6 +7,6 @@ import { Template } from "meteor/templating";
  * trigger checkoutPayment step on template checkoutReview render
  */
 
-Template.checkoutReview.onRendered(function () {
+Template.checkoutReviewBeesknees.onRendered(function () {
   Meteor.call("workflow/pushCartWorkflow", "coreCartWorkflow", "checkoutReview");
 });

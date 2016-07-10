@@ -1,5 +1,5 @@
 import { Packages, Shops } from "/lib/collections";
-import { Reaction, Logger } from "/server/api";
+import { Hooks, Reaction, Logger } from "/server/api";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
@@ -21,19 +21,19 @@ function modifyCheckoutWorkflow() {
 /**
  * Hook to setup core additional imports during ReactionCore init (shops process first)
  */
-if (Reaction && Reaction.Hooks) {
-  Reaction.Hooks.Events.add("onCoreInit", () => {
+if (Hooks) {
+  Hooks.Events.add("afterCoreInit", () => {
     Logger.info("Initialize using Bees Knees Data");
-    ReactionImport.fixture().process(Assets.getText("private/data/Shops.json"), ["name"], ReactionImport.shop);
+    Reaction.Import.fixture().process(Assets.getText("data/Shops.json"), ["name"], Reaction.Import.shop);
     // ensure Shops are loaded first.
-    ReactionImport.flush(Shops);
+    Reaction.Import.flush(Shops);
     // these will flush/import with the rest of the imports from core init.
-    ReactionImport.fixture().process(Assets.getText("private/data/Products.json"), ["title"], ReactionImport.load);
-    ReactionImport.fixture().process(Assets.getText("private/data/Tags.json"), ["name"], ReactionImport.load);
-    ReactionImport.flush();
+    Reaction.Import.fixture().process(Assets.getText("data/Products.json"), ["title"], Reaction.Import.load);
+    Reaction.Import.fixture().process(Assets.getText("data/Tags.json"), ["name"], Reaction.Import.load);
+    Reaction.Import.flush();
   });
 
-  Reaction.Hooks.Events.add("afterCoreInit", () => {
+  Hooks.Events.add("afterCoreInit", () => {
     modifyCheckoutWorkflow();
   });
 }
