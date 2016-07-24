@@ -1,6 +1,10 @@
+/* eslint-disable */
+import { Packages, Shops } from "/lib/collections";
+import { Hooks, Reaction, Logger } from "/server/api";
+
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
-  ReactionCore.Collections.Packages.update({
+  Packages.update({
     "name": "reaction-checkout",
     "layout": {
       "$elemMatch": {
@@ -18,19 +22,13 @@ function modifyCheckoutWorkflow() {
 /**
  * Hook to setup core additional imports during ReactionCore init (shops process first)
  */
-if (ReactionCore && ReactionCore.Hooks) {
-  ReactionCore.Hooks.Events.add("onCoreInit", () => {
-    ReactionCore.Log.info("Initialize using Bees Knees Data");
-    ReactionImport.fixture().process(Assets.getText("private/data/Shops.json"), ["name"], ReactionImport.shop);
-    // ensure Shops are loaded first.
-    ReactionImport.flush(ReactionCore.Collections.Shops);
-    // these will flush/import with the rest of the imports from core init.
-    ReactionImport.fixture().process(Assets.getText("private/data/Products.json"), ["title"], ReactionImport.load);
-    ReactionImport.fixture().process(Assets.getText("private/data/Tags.json"), ["name"], ReactionImport.load);
-    ReactionImport.flush();
+if (Hooks) {
+  Hooks.Events.add("afterCoreInit", () => {
+    // Reaction.Import.fixture().process(Assets.getText("data/Products.json"), ["title"], Reaction.Import.load);
   });
-
-  ReactionCore.Hooks.Events.add("afterCoreInit", () => {
+  
+  Hooks.Events.add("afterCoreInit", () => {
+    Logger.info("Modifying checkout workflow");
     modifyCheckoutWorkflow();
   });
 }

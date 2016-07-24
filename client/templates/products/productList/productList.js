@@ -1,12 +1,13 @@
+import { ReactionProduct } from "/lib/api";
+import { Media } from "/lib/collections";
+
 /**
  * productList helpers
  */
 
-let Media;
-Media = ReactionCore.Collections.Media;
 Template.productListBeesknees.helpers({
   products: function () {
-    return ReactionProducts.getProductsByTag(this.tag);
+    return ReactionProduct.getProductsByTag(this.tag);
   },
   media: function () {
     let defaultImage;

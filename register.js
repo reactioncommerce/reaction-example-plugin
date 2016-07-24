@@ -1,5 +1,7 @@
+import { Reaction } from "/server/api";
+
 // Register package as ReactionCommerce package
-ReactionCore.registerPackage({
+Reaction.registerPackage({
   label: "Bees Knees",
   name: "beesknees",
   icon: "fa fa-vine",
@@ -21,7 +23,7 @@ ReactionCore.registerPackage({
     structure: {
       template: "productsLanding",
       layoutHeader: "layoutHeaderBeesknees",
-      layoutFooter: "layoutFooter",
+      layoutFooter: "layoutFooterBeesknees",
       notFound: "productNotFound",
       dashboardHeader: "",
       dashboardControls: "dashboardControls",

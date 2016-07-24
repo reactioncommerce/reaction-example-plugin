@@ -1,4 +1,14 @@
-const $ = require("jquery");
+import { $ } from "meteor/jquery";
+import { Reaction } from "/client/api";
+import Logger from "/client/modules/logger";
+import { ReactionProduct } from "/lib/api";
+import { Media } from "/lib/collections";
+import { _ } from "lodash";
+import { Meteor } from "meteor/meteor";
+import { Session } from "meteor/session";
+import { Template } from "meteor/templating";
+import { Tracker } from "meteor/tracker";
+
 // load modules
 require("jquery-ui/sortable");
 
@@ -8,7 +18,7 @@ require("jquery-ui/sortable");
 
 Template.productGridItems.helpers({
   media: function () {
-    const media = ReactionCore.Collections.Media.findOne({
+    const media = Media.findOne({
       "metadata.productId": this._id,
       "metadata.priority": 0,
       "metadata.toGrid": 1
@@ -17,7 +27,7 @@ Template.productGridItems.helpers({
     return media instanceof FS.File ? media : false;
   },
   additionalMedia: function () {
-    const mediaArray = ReactionCore.Collections.Media.find({
+    const mediaArray = Media.find({
       "metadata.productId": this._id,
       "metadata.priority": {
         $gt: 0
@@ -81,7 +91,7 @@ Template.productGridItems.helpers({
 
 Template.productGridItemsBeesknees.events({
   "click [data-event-action=productClick]": function (event, template) {
-    if (ReactionCore.hasPermission("createProduct")) {
+    if (Reaction.hasPermission("createProduct")) {
       if (event.metaKey || event.ctrlKey || event.shiftKey) {
         event.preventDefault();
 
@@ -143,7 +153,7 @@ Template.productGridItemsBeesknees.events({
     };
     Meteor.call("products/updateProductPosition", this._id, position, tag, error => {
       if (error) {
-        ReactionCore.Log.warn(error);
+        Logger.warn(error);
         throw new Meteor.Error(403, error);
       }
     });
@@ -152,7 +162,7 @@ Template.productGridItemsBeesknees.events({
 });
 
 Template.productGridItemsBeesknees.onRendered(function () {
-  if (ReactionCore.hasPermission("createProduct")) {
+  if (Reaction.hasPermission("createProduct")) {
     let productSort = $(".product-grid-list");
 
     productSort.sortable({
@@ -179,7 +189,7 @@ Template.productGridItemsBeesknees.onRendered(function () {
           Meteor.call("products/updateProductPosition", productId, position, tag,
             error => {
               if (error) {
-                ReactionCore.Log.warn(error);
+                Logger.warn(error);
                 throw new Meteor.Error(403, error);
               }
             });

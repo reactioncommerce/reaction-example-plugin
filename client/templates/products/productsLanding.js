@@ -1,3 +1,10 @@
+import { Session } from "meteor/session";
+import { Template } from "meteor/templating";
+import { Reaction } from "/client/api";
+import { ReactionProduct } from "/lib/api";
+import { Products, Tags } from "/lib/collections";
+import { ITEMS_INCREMENT } from "/client/config/defaults";
+
 /**
  * loadMoreProducts
  * @summary whenever #productScrollLimitLoader becomes visible, retrieve more results
@@ -42,8 +49,7 @@ Template.productsLanding.onCreated(function () {
 
   // Update product subscription
   this.autorun(() => {
-    const slug = ReactionRouter.getParam("slug");
-    const { Tags } = ReactionCore.Collections;
+    const slug = Reaction.Router.getParam("slug");
     const tag = Tags.findOne({ slug: slug }) || Tags.findOne(slug);
     const scrollLimit = Session.get("productScrollLimit");
     let tags = {}; // this could be shop default implementation needed
@@ -63,13 +69,13 @@ Template.productsLanding.onCreated(function () {
 
     this.state.set("slug", slug);
 
-    const queryParams = Object.assign({}, tags, ReactionRouter.current().queryParams);
+    const queryParams = Object.assign({}, tags, Reaction.Router.current().queryParams);
     this.subscribe("Products", scrollLimit, queryParams);
 
     // we are caching `currentTag` or if we are not inside tag route, we will
     // use shop name as `base` name for `positions` object
     const currentTag = ReactionProduct.getTag();
-    const products = ReactionCore.Collections.Products.find({
+    const products = Products.find({
       ancestors: []
       // keep this, as an example
       // type: { $in: ["simple"] }
@@ -86,7 +92,7 @@ Template.productsLanding.onCreated(function () {
   });
 
   this.autorun(() => {
-    const isActionViewOpen = ReactionCore.isActionViewOpen();
+    const isActionViewOpen = Reaction.isActionViewOpen();
     if (isActionViewOpen === false) {
       Session.set("productGrid/selectedProducts", []);
     }
@@ -101,9 +107,9 @@ Template.productsLanding.onRendered(() => {
 
 Template.productsLanding.helpers({
   tag: function () {
-    const id = ReactionRouter.getParam("_tag");
+    const id = Reaction.Router.getParam("_tag");
     return {
-      tag: ReactionCore.Collections.Tags.findOne({ slug: id }) || ReactionCore.Collections.Tags.findOne(id)
+      tag: Tags.findOne({ slug: id }) || Tags.findOne(id)
     };
   },
 
@@ -152,7 +158,7 @@ Template.productsLanding.events({
   },
   "click .product-list-item": function () {
     // go to new product
-    ReactionRouter.go("product", {
+    Reaction.Router.go("product", {
       handle: this._id
     });
   },
@@ -161,4 +167,3 @@ Template.productsLanding.events({
     loadMoreProducts();
   }
 });
-
