@@ -1,7 +1,6 @@
 // checkout
-import "./checkout/review/review";
 import "./checkout/review/review.html";
-
+import "./checkout/review/review";
 
 // layouts
 import "./layouts/core.html";
