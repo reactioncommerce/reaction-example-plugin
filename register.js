@@ -16,7 +16,7 @@ Reaction.registerPackage({
   ],
   layout: [{
     layout: "coreLayoutBeesknees",
-    workflow: "coreProductWorkflow",
+    workflow: "coreWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
@@ -29,7 +29,22 @@ Reaction.registerPackage({
       dashboardControls: "dashboardControls",
       dashboardHeaderControls: "",
       adminControlsFooter: "adminControlsFooter"
-    }
-  }]
+    } }, {
+    layout: "coreLayoutBeesknees",
+    workflow: "coreProductWorkflow",
+    collection: "Products",
+    theme: "default",
+    enabled: true,
+    structure: {
+      template: "productDetail",
+      layoutHeader: "layoutHeader",
+      layoutFooter: "",
+      notFound: "productNotFound",
+      dashboardHeader: "",
+      dashboardControls: "productDetailDashboardControls",
+      dashboardHeaderControls: "",
+      adminControlsFooter: "adminControlsFooter"
+    }}
+  ]
 });
 
