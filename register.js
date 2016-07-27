@@ -22,29 +22,14 @@ Reaction.registerPackage({
     enabled: true,
     structure: {
       template: "productsLanding",
-      layoutHeader: "layoutHeaderBeesknees",
-      layoutFooter: "layoutFooterBeesknees",
+      layoutHeader: "layoutHeader",
+      layoutFooter: "layoutFooter",
       notFound: "productNotFound",
       dashboardHeader: "",
       dashboardControls: "dashboardControls",
       dashboardHeaderControls: "",
       adminControlsFooter: "adminControlsFooter"
-    } }, {
-    layout: "coreLayoutBeesknees",
-    workflow: "coreProductWorkflow",
-    collection: "Products",
-    theme: "default",
-    enabled: true,
-    structure: {
-      template: "productDetail",
-      layoutHeader: "layoutHeader",
-      layoutFooter: "",
-      notFound: "productNotFound",
-      dashboardHeader: "",
-      dashboardControls: "productDetailDashboardControls",
-      dashboardHeaderControls: "",
-      adminControlsFooter: "adminControlsFooter"
-    }}
+    } }
   ]
 });
 
