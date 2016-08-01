@@ -1,1 +1,1 @@
-import "./load";
+import "./init";
