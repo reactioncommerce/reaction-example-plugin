@@ -1,7 +1,7 @@
 [{
 	"_id": "GenZZBB6DnP6kbWKu",
-	"slug": "two-piece",
 	"name": "two-piece",
+	"slug": "two-piece",
 	"isTopLevel": false,
 	"shopId": "J8Bhq3uTtdgwZx3rz",
 	"updatedAt": {
@@ -13,8 +13,8 @@
 },
 {
 	"_id": "XMubvFRKnqA44ZKT3",
-	"slug": "one-piece",
 	"name": "one-piece",
+	"slug": "one-piece",
 	"isTopLevel": false,
 	"shopId": "J8Bhq3uTtdgwZx3rz",
 	"updatedAt": {
@@ -26,8 +26,8 @@
 },
 {
 	"_id": "fThYz6ZhexfMP95KR",
-	"slug": "toddler",
 	"name": "toddler",
+	"slug": "toddler",
 	"isTopLevel": false,
 	"shopId": "J8Bhq3uTtdgwZx3rz",
 	"updatedAt": {
@@ -52,8 +52,8 @@
 },
 {
 	"_id": "zK5JyqqWoRGgCkTYt",
-	"slug": "newborn",
 	"name": "newborn",
+	"slug": "newborn",
 	"isTopLevel": false,
 	"shopId": "J8Bhq3uTtdgwZx3rz",
 	"updatedAt": {
@@ -62,4 +62,18 @@
 	"createdAt": {
 		"$date": "2016-05-12T06:00:00.650Z"
 	}
+},
+{
+	"_id": "Q6Fk3T7TpLKKkNuxZ",
+	"name": "Newborn",
+	"slug": "newborn",
+	"isTopLevel": false,
+	"updatedAt": {
+		"$date": "2016-08-01T03:17:25.894Z"
+	},
+	"createdAt": {
+		"$date": "2016-08-01T03:17:25.899Z"
+	},
+	"shopId": "J8Bhq3uTtdgwZx3rz"
 }]
+
