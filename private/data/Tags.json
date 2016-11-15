@@ -1,79 +1,58 @@
-[{
-	"_id": "GenZZBB6DnP6kbWKu",
-	"name": "two-piece",
-	"slug": "two-piece",
-	"isTopLevel": false,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"updatedAt": {
-		"$date": "2016-05-12T06:06:48.167Z"
-	},
-	"createdAt": {
-		"$date": "2016-05-12T06:06:48.175Z"
-	}
-},
-{
-	"_id": "XMubvFRKnqA44ZKT3",
-	"name": "one-piece",
-	"slug": "one-piece",
-	"isTopLevel": false,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"updatedAt": {
-		"$date": "2016-05-12T06:20:33.870Z"
-	},
-	"createdAt": {
-		"$date": "2016-05-12T06:20:33.876Z"
-	}
-},
-{
-	"_id": "fThYz6ZhexfMP95KR",
-	"name": "toddler",
-	"slug": "toddler",
-	"isTopLevel": false,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"updatedAt": {
-		"$date": "2016-05-12T06:00:03.475Z"
-	},
-	"createdAt": {
-		"$date": "2016-05-12T06:00:03.480Z"
-	}
-},
-{
-	"_id": "rpjCvTBGjhBi2xdro",
-	"name": "Shop",
-	"slug": "shop",
-	"isTopLevel": true,
-	"updatedAt": {
-		"$date": "2014-04-09T20:23:57.412Z"
-	},
-	"createdAt": {
-		"$date": "2014-04-09T20:23:57.412Z"
-	},
-	"shopId": "J8Bhq3uTtdgwZx3rz"
-},
-{
-	"_id": "zK5JyqqWoRGgCkTYt",
-	"name": "newborn",
-	"slug": "newborn",
-	"isTopLevel": false,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"updatedAt": {
-		"$date": "2016-05-12T06:00:00.645Z"
-	},
-	"createdAt": {
-		"$date": "2016-05-12T06:00:00.650Z"
-	}
-},
-{
-	"_id": "Q6Fk3T7TpLKKkNuxZ",
-	"name": "Newborn",
-	"slug": "newborn",
-	"isTopLevel": false,
-	"updatedAt": {
-		"$date": "2016-08-01T03:17:25.894Z"
-	},
-	"createdAt": {
-		"$date": "2016-08-01T03:17:25.899Z"
-	},
-	"shopId": "J8Bhq3uTtdgwZx3rz"
-}]
-
+[
+  {
+    "_id": "GenZZBB6DnP6kbWKu",
+    "name": "Two-piece",
+    "slug": "two-piece",
+    "isTopLevel": false,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "updatedAt": {
+      "$date": "2016-05-12T06:06:48.167Z"
+    },
+    "createdAt": {
+      "$date": "2016-05-12T06:06:48.175Z"
+    },
+    "isDeleted": false
+  },
+  {
+    "_id": "XMubvFRKnqA44ZKT3",
+    "name": "One-piece",
+    "slug": "one-piece",
+    "isTopLevel": false,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "updatedAt": {
+      "$date": "2016-05-12T06:20:33.870Z"
+    },
+    "createdAt": {
+      "$date": "2016-05-12T06:20:33.876Z"
+    },
+    "isDeleted": false
+  },
+  {
+    "_id": "fThYz6ZhexfMP95KR",
+    "name": "Toddler",
+    "slug": "toddler",
+    "isTopLevel": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "updatedAt": {
+      "$date": "2016-05-12T06:00:03.475Z"
+    },
+    "createdAt": {
+      "$date": "2016-05-12T06:00:03.480Z"
+    },
+    "isDeleted": false
+  },
+  {
+    "_id": "Q6Fk3T7TpLKKkNuxZ",
+    "name": "Newborn",
+    "slug": "newborn",
+    "isTopLevel": true,
+    "updatedAt": {
+      "$date": "2016-08-01T03:17:25.894Z"
+    },
+    "createdAt": {
+      "$date": "2016-08-01T03:17:25.899Z"
+    },
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "isDeleted": false
+  }
+]
