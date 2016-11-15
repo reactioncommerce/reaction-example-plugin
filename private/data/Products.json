@@ -1,201 +1,300 @@
-[{
-	"_id": "fadoPeuNTswxnyhpY",
-	"title": "Baby Yoga Outfit",
-	"type": "simple",
-	"ancestors": [],
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"requiresShipping": true,
-	"handle": "baby-yoga-outfit",
-	"isVisible": true,
-	"createdAt": {
-		"$date": "2016-08-01T02:41:08.736Z"
-	},
-	"updatedAt": {
-		"$date": "2016-08-01T02:55:27.057Z"
-	},
-	"workflow": {
-		"status": "new"
-	},
-	"pageTitle": "Baby Yoga Outfit",
-	"vendor": "Bee's Knees - Made in U.S.A.",
-	"description": "This two piece Yoga outfit is made from all organic cotton and is loose fitting for all your downward dogs",
-	"price": {
-		"range": "18.45",
-		"min": 18.45,
-		"max": 18.45
-	},
-	"isSoldOut": false,
-	"isLowQuantity": false,
-	"isBackorder": true,
-	"metafields": [
-		{
-			"key": "Material",
-			"value": "100% Organic Cotton"
-		},
-		{
-			"key": "Ages",
-			"value": "3 mons. - 1 year"
-		},
-		{
-			"key": "Clasps",
-			"value": "Brass"
-		}
-	],
-	"hashtags": [
-		"6agXTHvMxnDL6gtMx",
-		"y6vhFk4XQQqoxm5yb"
-	]
-},
-{
-	"_id": "RzTJwvw3vvqj3PNS3",
-	"title": "Yoga Outfit",
-	"ancestors": [
-		"fadoPeuNTswxnyhpY"
-	],
-	"price": 18.45,
-	"type": "variant",
-	"inventoryManagement": true,
-	"inventoryPolicy": false,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"weight": 32,
-	"inventoryQuantity": 0,
-	"compareAtPrice": 19.99,
-	"taxable": true,
-	"lowInventoryWarningThreshold": 0
-},
-{
-	"_id": "72FqA54mF4T86mgvh",
-	"title": "Paprika",
-	"ancestors": [
-		"fadoPeuNTswxnyhpY",
-		"RzTJwvw3vvqj3PNS3"
-	],
-	"type": "variant",
-	"price": 18.45,
-	"inventoryManagement": true,
-	"inventoryPolicy": true,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"optionTitle": "Paprika",
-	"inventoryQuantity": 10
-},
-{
-	"_id": "tYrHB2ENQXTQdPAib",
-	"title": "Avacado",
-	"ancestors": [
-		"fadoPeuNTswxnyhpY",
-		"RzTJwvw3vvqj3PNS3"
-	],
-	"type": "variant",
-	"price": 18.45,
-	"inventoryManagement": true,
-	"inventoryPolicy": true,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"optionTitle": "Avacado",
-	"inventoryQuantity": 10
-},
-{
-	"_id": "vkwF52SstkznWJHts",
-	"title": "Onesie",
-	"type": "simple",
-	"ancestors": [],
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"requiresShipping": true,
-	"handle": "onesie",
-	"isVisible": true,
-	"createdAt": {
-		"$date": "2016-08-01T03:13:09.771Z"
-	},
-	"updatedAt": {
-		"$date": "2016-08-01T03:22:33.913Z"
-	},
-	"workflow": {
-		"status": "new"
-	},
-	"pageTitle": "Onesie",
-	"vendor": "Bee's Knees - Made in the U.S.A.",
-	"description": "A versatile Onesie for crawling, walking, eating and so much more. Soft organic cotton makes it comfortable for your baby, and easy on your conscience.",
-	"price": {
-		"range": "22.5 - 23",
-		"min": 22.5,
-		"max": 23
-	},
-	"isSoldOut": false,
-	"isLowQuantity": false,
-	"isBackorder": false,
-	"metafields": [
-		{
-			"key": "Material",
-			"value": "100% Organic Cotton"
-		},
-		{
-			"key": "Ages",
-			"value": "NewBorn"
-		},
-		{
-			"key": "Clasps",
-			"value": "Brass"
-		}
-	],
-	"hashtags": [
-		"Q6Fk3T7TpLKKkNuxZ"
-	]
-},
-{
-	"_id": "W8Xaf6zsEQAM6Bcj9",
-	"title": "Natural",
-	"ancestors": [
-		"vkwF52SstkznWJHts",
-		"rCDx9oZYc66CRdZcR"
-	],
-	"type": "variant",
-	"price": 22.5,
-	"inventoryManagement": true,
-	"inventoryPolicy": true,
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"optionTitle": "Natural",
-	"inventoryQuantity": 10
-},
-{
-	"_id": "4qRgocanytNwGDv6o",
-	"title": "Baby Sack",
-	"type": "simple",
-	"ancestors": [],
-	"shopId": "J8Bhq3uTtdgwZx3rz",
-	"requiresShipping": true,
-	"handle": "baby-sack",
-	"isVisible": true,
-	"createdAt": {
-		"$date": "2016-08-01T03:17:54.961Z"
-	},
-	"updatedAt": {
-		"$date": "2016-08-01T03:20:52.119Z"
-	},
-	"workflow": {
-		"status": "new"
-	},
-	"pageTitle": "Baby Sack",
-	"vendor": "Bee's Knees - Made in the U.S.A.",
-	"description": "A unique, mostly freeform garment that keeps your baby warm while allowing maximum movement",
-	"price": {
-		"range": "19",
-		"min": 19,
-		"max": 19
-	},
-	"isSoldOut": false,
-	"isLowQuantity": false,
-	"isBackorder": false,
-	"hashtags": [
-		"Q6Fk3T7TpLKKkNuxZ"
-	],
-	"metafields": [
-		{
-			"key": "Material",
-			"value": "100% Organic Cotton"
-		},
-		{
-			"key": "Ages",
-			"value": "Newborn"
-		}
-	]
-}]
+[
+  {
+    "_id": "fadoPeuNTswxnyhpY",
+    "title": "Baby Yoga Outfit",
+    "type": "simple",
+    "ancestors": [],
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "requiresShipping": true,
+    "handle": "baby-yoga-outfit",
+    "isVisible": true,
+    "createdAt": {
+      "$date": "2016-08-01T02:41:08.736Z"
+    },
+    "updatedAt": {
+      "$date": "2016-11-14T23:48:15.693Z"
+    },
+    "workflow": {
+      "status": "new"
+    },
+    "pageTitle": "Align your baby's chakra",
+    "vendor": "Bee's Knees - Made in U.S.A.",
+    "description": "This two piece Yoga outfit is made from all organic cotton and is loose fitting for all your downward dogs",
+    "price": {
+      "range": "18.45",
+      "min": 18.45,
+      "max": 18.45
+    },
+    "isSoldOut": false,
+    "isLowQuantity": false,
+    "isBackorder": true,
+    "metafields": [
+      {
+        "key": "Material",
+        "value": "100% Organic Cotton"
+      },
+      {
+        "key": "Ages",
+        "value": "3 mons. - 1 year"
+      },
+      {
+        "key": "Clasps",
+        "value": "Brass"
+      }
+    ],
+    "hashtags": [
+      "fThYz6ZhexfMP95KR",
+      "XMubvFRKnqA44ZKT3"
+    ],
+    "isDeleted": false
+  },
+  {
+    "_id": "RzTJwvw3vvqj3PNS3",
+    "title": "Yoga Outfit",
+    "ancestors": [
+      "fadoPeuNTswxnyhpY"
+    ],
+    "price": 18.45,
+    "type": "variant",
+    "inventoryManagement": true,
+    "inventoryPolicy": false,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "weight": 32,
+    "inventoryQuantity": 0,
+    "compareAtPrice": 19.99,
+    "taxable": true,
+    "lowInventoryWarningThreshold": 0,
+    "isVisible": true,
+    "isDeleted": false,
+    "taxCode": "00000",
+    "optionTitle": "Untitled Option",
+    "workflow": {
+      "status": "new"
+    }
+  },
+  {
+    "_id": "72FqA54mF4T86mgvh",
+    "title": "Cinnamon",
+    "ancestors": [
+      "fadoPeuNTswxnyhpY",
+      "RzTJwvw3vvqj3PNS3"
+    ],
+    "type": "variant",
+    "price": 18.45,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "optionTitle": "Cinnamon",
+    "inventoryQuantity": 10,
+    "isVisible": true,
+    "isDeleted": false,
+    "taxable": true,
+    "taxCode": "00000",
+    "workflow": {
+      "status": "new"
+    }
+  },
+  {
+    "_id": "tYrHB2ENQXTQdPAib",
+    "title": "Avacado",
+    "ancestors": [
+      "fadoPeuNTswxnyhpY",
+      "RzTJwvw3vvqj3PNS3"
+    ],
+    "type": "variant",
+    "price": 18.45,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "optionTitle": "Avacado",
+    "inventoryQuantity": 10,
+    "isVisible": true,
+    "isDeleted": false,
+    "taxable": true,
+    "taxCode": "00000",
+    "workflow": {
+      "status": "new"
+    }
+  },
+  {
+    "_id": "vkwF52SstkznWJHts",
+    "title": "Onesie",
+    "type": "simple",
+    "ancestors": [],
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "requiresShipping": true,
+    "handle": "onesie",
+    "isVisible": true,
+    "createdAt": {
+      "$date": "2016-08-01T03:13:09.771Z"
+    },
+    "updatedAt": {
+      "$date": "2016-08-01T03:22:33.913Z"
+    },
+    "workflow": {
+      "status": "new"
+    },
+    "pageTitle": "Onesie",
+    "vendor": "Bee's Knees - Made in the U.S.A.",
+    "description": "A versatile Onesie for crawling, walking, eating and so much more. Soft organic cotton makes it comfortable for your baby, and easy on your conscience.",
+    "price": {
+      "range": "22.5 - 23",
+      "min": 22.5,
+      "max": 23
+    },
+    "isSoldOut": false,
+    "isLowQuantity": false,
+    "isBackorder": false,
+    "metafields": [
+      {
+        "key": "Material",
+        "value": "100% Organic Cotton"
+      },
+      {
+        "key": "Ages",
+        "value": "NewBorn"
+      },
+      {
+        "key": "Clasps",
+        "value": "Brass"
+      }
+    ],
+    "hashtags": [
+      "Q6Fk3T7TpLKKkNuxZ"
+    ],
+    "isDeleted": false
+  },
+  {
+    "_id": "W8Xaf6zsEQAM6Bcj9",
+    "title": "Natural",
+    "ancestors": [
+      "vkwF52SstkznWJHts",
+      "rCDx9oZYc66CRdZcR"
+    ],
+    "type": "variant",
+    "price": 22.5,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "optionTitle": "Natural",
+    "inventoryQuantity": 10,
+    "isVisible": true,
+    "isDeleted": false,
+    "taxable": true,
+    "taxCode": "00000",
+    "workflow": {
+      "status": "new"
+    }
+  },
+  {
+    "_id": "4qRgocanytNwGDv6o",
+    "title": "Baby Sack",
+    "type": "simple",
+    "ancestors": [],
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "requiresShipping": true,
+    "handle": "baby-sack",
+    "isVisible": true,
+    "createdAt": {
+      "$date": "2016-08-01T03:17:54.961Z"
+    },
+    "updatedAt": {
+      "$date": "2016-11-15T00:07:14.821Z"
+    },
+    "workflow": {
+      "status": "new"
+    },
+    "pageTitle": "The \"live all day\" clothing",
+    "vendor": "Bee's Knees - Made in the U.S.A.",
+    "description": "A unique, mostly freeform garment that keeps your baby warm while allowing maximum movement",
+    "price": {
+      "range": "22.50",
+      "min": 22.5,
+      "max": 22.5
+    },
+    "isSoldOut": false,
+    "isLowQuantity": false,
+    "isBackorder": false,
+    "hashtags": [
+      "Q6Fk3T7TpLKKkNuxZ"
+    ],
+    "metafields": [
+      {
+        "key": "Material",
+        "value": "100% Organic Cotton"
+      },
+      {
+        "key": "Ages",
+        "value": "Newborn"
+      }
+    ],
+    "isDeleted": false
+  },
+  {
+    "_id": "54EdrqcRvaYvmfv42",
+    "title": "One Size Fits All",
+    "ancestors": [
+      "4qRgocanytNwGDv6o"
+    ],
+    "type": "variant",
+    "price": 0,
+    "isVisible": true,
+    "isDeleted": false,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "taxable": true,
+    "taxCode": "00000",
+    "optionTitle": "One Size Fits All",
+    "workflow": {
+      "status": "new"
+    },
+    "inventoryQuantity": 0,
+    "weight": 12
+  },
+  {
+    "_id": "rHQkRHQoDShbsA34Y",
+    "ancestors": [
+      "4qRgocanytNwGDv6o",
+      "54EdrqcRvaYvmfv42"
+    ],
+    "type": "variant",
+    "price": 22.5,
+    "isVisible": true,
+    "isDeleted": false,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "taxable": true,
+    "taxCode": "00000",
+    "optionTitle": "Avocado",
+    "workflow": {
+      "status": "new"
+    },
+    "title": "Avocado",
+    "inventoryQuantity": 100
+  },
+  {
+    "_id": "h3wWfAbm9Jrm6AE8S",
+    "ancestors": [
+      "4qRgocanytNwGDv6o",
+      "54EdrqcRvaYvmfv42"
+    ],
+    "type": "variant",
+    "price": 22.5,
+    "isVisible": true,
+    "isDeleted": false,
+    "inventoryManagement": true,
+    "inventoryPolicy": true,
+    "shopId": "J8Bhq3uTtdgwZx3rz",
+    "taxable": true,
+    "taxCode": "00000",
+    "optionTitle": "Paprika",
+    "workflow": {
+      "status": "new"
+    },
+    "title": "Paprika",
+    "inventoryQuantity": 100
+  }
+]
 

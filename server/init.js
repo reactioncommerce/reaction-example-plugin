@@ -1,6 +1,6 @@
-import {Packages, Shops} from "/lib/collections";
-import {Hooks, Reaction, Logger} from "/server/api";
-import {check} from "meteor/check";
+import { check } from "meteor/check";
+import { Packages, Shops } from "/lib/collections";
+import { Hooks, Reaction, Logger } from "/server/api";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
@@ -36,7 +36,7 @@ function changeLayouts(shopId, newLayout) {
   check(shopId, String);
   check(newLayout, String);
   Logger.info(`::: changing all layouts to ${newLayout}`);
-  let shop = Shops.findOne(shopId);
+  const shop = Shops.findOne(shopId);
   for (let i = 0; i < shop.layout.length; i++) {
     shop.layout[i].layout = newLayout;
   }
