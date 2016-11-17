@@ -13,11 +13,11 @@
     </nav>
 
   <main role="main" id="main">
-    <div class="rui beesknees">
-      <div class="bkdebug"><em>Bee's Knees layout</em></div>
+    <div class="rui beesknees"> <!--- So you wouldn't want to actually have this here but it's good for some examples -->
+      <div class="bkdebug"><em data-i18n="beesknees.navbar.beeskneesLayout">Bee's Knees layout</em></div>
       <div class="bkdebug"><em>layoutHeader template:</em> {{layoutHeader}}</div>
       <div class="bkdebug"><em>layoutFooter template:</em> {{layoutFooter}}</div>
-      <div class="bkdebug"><em>Main Template:</em> {{template}}</div>
+      <div class="bkdebug"><em data-i18n="beesknees.navbar.mainTemplate">Main Layout</em> {{template}}</div>
     </div>
     <span id="layout-alerts">{{> inlineAlerts}}</span>
     {{#if hasPermission 'guest'}}
