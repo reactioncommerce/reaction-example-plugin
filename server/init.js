@@ -41,7 +41,7 @@ function changeLayouts(shopId, newLayout) {
     shop.layout[i].layout = newLayout;
   }
   return Shops.update(shopId, {
-    $set: {layout: shop.layout}
+    $set: { layout: shop.layout }
   });
 }
 

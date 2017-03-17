@@ -14,7 +14,7 @@ import { ITEMS_INCREMENT } from "/client/config/defaults";
  */
 function loadMoreProducts() {
   let threshold;
-  let target = $("#productScrollLimitLoader");
+  const target = $("#productScrollLimitLoader");
   let scrollContainer = $("#reactionAppContainer");
 
   if (scrollContainer.length === 0) {
@@ -55,7 +55,7 @@ Template.productsLanding.onCreated(function () {
     let tags = {}; // this could be shop default implementation needed
 
     if (tag) {
-      tags = {tags: [tag._id]};
+      tags = { tags: [tag._id] };
     }
 
     // if we get an invalid slug, don't return all products
