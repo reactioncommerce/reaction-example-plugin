@@ -5,6 +5,9 @@ Reaction.registerPackage({
   label: "Bees Knees",
   name: "beesknees",
   icon: "fa fa-vine",
+  meta: {
+    version: "1.0.0"
+  },
   autoEnable: true,
   registry: [
     {
