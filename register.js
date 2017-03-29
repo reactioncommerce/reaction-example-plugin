@@ -23,6 +23,7 @@ Reaction.registerPackage({
     collection: "Products",
     theme: "default",
     enabled: true,
+    priority: 1,
     structure: {
       template: "productsLanding",
       layoutHeader: "layoutHeader",
