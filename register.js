@@ -5,6 +5,9 @@ Reaction.registerPackage({
   label: "Bees Knees",
   name: "beesknees",
   icon: "fa fa-vine",
+  meta: {
+    version: "1.0.0"
+  },
   autoEnable: true,
   registry: [
     {
@@ -16,10 +19,11 @@ Reaction.registerPackage({
   ],
   layout: [{
     layout: "coreLayoutBeesknees",
-    workflow: "coreWorkflow",
+    workflow: "coreProductGridWorkflow",
     collection: "Products",
     theme: "default",
     enabled: true,
+    priority: 1,
     structure: {
       template: "productsLanding",
       layoutHeader: "layoutHeader",

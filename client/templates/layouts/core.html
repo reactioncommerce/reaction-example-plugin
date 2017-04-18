@@ -13,7 +13,12 @@
     </nav>
 
   <main role="main" id="main">
-    <p>This is the Bee's Knees layout</p>
+    <div class="rui beesknees">
+      <div class="bkdebug"><em>Bee's Knees layout</em></div>
+      <div class="bkdebug"><em>layoutHeader template:</em> {{layoutHeader}}</div>
+      <div class="bkdebug"><em>layoutFooter template:</em> {{layoutFooter}}</div>
+      <div class="bkdebug"><em>Main Template:</em> {{template}}</div>
+    </div>
     <span id="layout-alerts">{{> inlineAlerts}}</span>
     {{#if hasPermission 'guest'}}
       <!-- begin template region -->
