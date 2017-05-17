@@ -3,7 +3,7 @@ import "./checkout/review/review.html";
 import "./checkout/review/review";
 
 // layouts
-import "./layouts/core.html";
+import "./layouts/core";
 
 
 // products
