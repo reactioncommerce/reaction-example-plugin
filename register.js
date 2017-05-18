@@ -27,7 +27,7 @@ Reaction.registerPackage({
     structure: {
       template: "productsLanding",
       layoutHeader: "layoutHeader",
-      layoutFooter: "layoutFooter",
+      layoutFooter: "layoutFooterBeesKnees",
       notFound: "productNotFound",
       dashboardHeader: "",
       dashboardControls: "dashboardControls",
