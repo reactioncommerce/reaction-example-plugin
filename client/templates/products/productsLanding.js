@@ -88,7 +88,7 @@ Template.productsLanding.onCreated(function () {
     });
 
     this.state.set("canLoadMoreProducts", products.count() >= Session.get("productScrollLimit"));
-    this.products.set(products);
+    this.products.set(products.fetch());
   });
 
   this.autorun(() => {
