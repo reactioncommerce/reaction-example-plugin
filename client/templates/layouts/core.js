@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
 import { Template } from "meteor/templating";
-import { registerComponent } from "/imports/plugins/core/layout/lib/components";
+import { registerComponent, Components } from "/imports/plugins/core/components/lib";
 
 class CoreLayoutBeesknees extends Component {
   static propTypes = {
@@ -21,9 +21,8 @@ class CoreLayoutBeesknees extends Component {
 
     return (
       <div className={pageClassName} id="reactionAppContainer">
-        { Template[layoutHeader] &&
-          <Blaze template={layoutHeader} className="reaction-navigation-header" />
-        }
+
+        <Components.NavBar />
 
         <Blaze template="cartDrawer" className="reaction-cart-drawer" />
 
@@ -31,7 +30,6 @@ class CoreLayoutBeesknees extends Component {
           <main>
             <div className="rui beesknees">
               <div className="bkdebug"><em>{"Bee's Knees layout"}</em></div>
-              <div className="bkdebug"><em>{"layoutHeader template:"}</em> {this.props.structure.layoutHeader}</div>
               <div className="bkdebug"><em>{"layoutFooter template:"}</em> {this.props.structure.layoutFooter}</div>
               <div className="bkdebug"><em>{"Main Template:"}</em> {this.props.structure.template}</div>
             </div>
@@ -48,9 +46,6 @@ class CoreLayoutBeesknees extends Component {
 }
 
 // Register component for it to be usable
-registerComponent({
-  name: "coreLayoutBeesknees",
-  component: CoreLayoutBeesknees
-});
+registerComponent("coreLayoutBeesknees", CoreLayoutBeesknees);
 
 export default CoreLayoutBeesknees;
