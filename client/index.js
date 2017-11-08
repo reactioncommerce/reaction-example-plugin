@@ -1,3 +1,5 @@
+import "./components";
+import "./static";
 import "./templates";
 import "./defaults";
 import "./init";

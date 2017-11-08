@@ -24,7 +24,7 @@ function addRolesToGroups() {
   Logger.info("::: Adding about route permissions to groups");
   Groups.update({},
     { $addToSet: { permissions: "about" } },
-    { multi: true}
+    { multi: true }
   );
 }
 
