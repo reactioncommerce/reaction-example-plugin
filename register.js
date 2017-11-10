@@ -1,6 +1,5 @@
 import { Reaction } from "/server/api";
 
-// Register package as ReactionCommerce package
 Reaction.registerPackage({
   label: "Bees Knees",
   name: "beesknees",
@@ -14,7 +13,7 @@ Reaction.registerPackage({
       route: "/about",
       name: "about",
       template: "aboutUs",
-      workflow: "coreWorkflow"
+      workflow: "coreProductGridWorkflow"
     }
   ],
   layout: [{
@@ -26,8 +25,8 @@ Reaction.registerPackage({
     priority: 1,
     structure: {
       template: "productsLanding",
-      layoutHeader: "layoutHeader",
-      layoutFooter: "layoutFooterBeesKnees",
+      layoutHeader: "NavBar",
+      layoutFooter: "Footer",
       notFound: "productNotFound",
       dashboardHeader: "",
       dashboardControls: "dashboardControls",

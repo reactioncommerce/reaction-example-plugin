@@ -3207,7 +3207,7 @@
         "enabled": true,
         "structure": {
           "template": "cartCheckout",
-          "layoutHeader": "checkoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "notFound",
           "dashboardControls": "dashboardControls",
           "adminControlsFooter": "adminControlsFooter"
@@ -3222,7 +3222,7 @@
         "enabled": true,
         "structure": {
           "template": "dashboardPackages",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "notFound",
           "dashboardHeader": "dashboardHeader",
           "dashboardControls": "dashboardControls",
@@ -3239,7 +3239,7 @@
         "enabled": true,
         "structure": {
           "template": "email",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "notFound",
           "dashboardHeader": "dashboardHeader",
           "dashboardControls": "dashboardControls",
@@ -3256,8 +3256,8 @@
         "enabled": true,
         "structure": {
           "template": "orders",
-          "layoutHeader": "layoutHeader",
-          "layoutFooter": "layoutFooter",
+          "layoutHeader": "NavBar",
+          "layoutFooter": "Footer",
           "notFound": "notFound",
           "dashboardHeader": "dashboardHeader",
           "dashboardHeaderControls": "orderListFilters",
@@ -3274,8 +3274,8 @@
         "enabled": true,
         "structure": {
           "template": "completedPDFLayout",
-          "layoutHeader": "layoutHeader",
-          "layoutFooter": "layoutFooter"
+          "layoutHeader": "NavBar",
+          "layoutFooter": "Footer"
         },
         "priority": 1,
         "position": 1
@@ -3297,7 +3297,7 @@
         "enabled": true,
         "structure": {
           "template": "uiDashboard",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "notFound",
           "dashboardHeader": "dashboardHeader",
           "adminControlsFooter": "adminControlsFooter"
@@ -3322,7 +3322,7 @@
         "enabled": true,
         "structure": {
           "template": "productDetailSimple",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "productNotFound",
           "dashboardControls": "productDetailDashboardControls",
           "adminControlsFooter": "adminControlsFooter"
@@ -3338,7 +3338,7 @@
         "enabled": true,
         "structure": {
           "template": "productDetail",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "productNotFound",
           "dashboardControls": "productDetailDashboardControls",
           "adminControlsFooter": "adminControlsFooter"
@@ -3354,8 +3354,8 @@
         "enabled": true,
         "structure": {
           "template": "productsLanding",
-          "layoutHeader": "layoutHeader",
-          "layoutFooter": "layoutFooter",
+          "layoutHeader": "NavBar",
+          "layoutFooter": "Footer",
           "notFound": "productNotFound",
           "dashboardControls": "dashboardControls",
           "adminControlsFooter": "adminControlsFooter"
@@ -3371,7 +3371,7 @@
         "enabled": true,
         "structure": {
           "template": "accountsDashboard",
-          "layoutHeader": "layoutHeader",
+          "layoutHeader": "NavBar",
           "notFound": "notFound",
           "dashboardHeader": "dashboardHeader",
           "adminControlsFooter": "adminControlsFooter"
@@ -3386,8 +3386,8 @@
         "enabled": true,
         "structure": {
           "template": "products",
-          "layoutHeader": "layoutHeader",
-          "layoutFooter": "layoutFooter",
+          "layoutHeader": "NavBar",
+          "layoutFooter": "Footer",
           "notFound": "productNotFound",
           "dashboardControls": "dashboardControls",
           "adminControlsFooter": "adminControlsFooter"
@@ -3402,8 +3402,8 @@
         "enabled": true,
         "structure": {
           "template": "unauthorized",
-          "layoutHeader": "layoutHeader",
-          "layoutFooter": "layoutFooter"
+          "layoutHeader": "NavBar",
+          "layoutFooter": "Footer"
         },
         "priority": 1,
         "position": 1
