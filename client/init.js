@@ -1,4 +1,4 @@
-import {Router, Logger} from "/client/api";
+import { Router, Logger } from "/client/api";
 
 // create a function to do something on the product detail page
 function logSomeStuff() {
