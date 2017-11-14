@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import { registerComponent } from "/imports/plugins/core/components/lib";
 
 class AboutUs extends Component {

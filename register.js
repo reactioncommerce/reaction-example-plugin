@@ -32,7 +32,7 @@ Reaction.registerPackage({
       dashboardControls: "dashboardControls",
       dashboardHeaderControls: "",
       adminControlsFooter: "adminControlsFooter"
-    } }
-  ]
+    }
+  }]
 });
 
