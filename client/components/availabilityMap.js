@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { DocHead } from "meteor/kadira:dochead";
-
+import { i18next } from "/client/api";
 
 class AvailabilityMap extends React.Component {
   static propTypes = {
@@ -14,7 +14,7 @@ class AvailabilityMap extends React.Component {
 
       DocHead.loadScript(url, () => {
         // eslint-disable-next-line no-undef, no-new
-        const map = new google.maps.Map(this.refs.map, {
+        const googleMap = new google.maps.Map(this.refs.map, {
           center: {
             lat: this.props.product.lat,
             lng: this.props.product.lng
@@ -28,8 +28,8 @@ class AvailabilityMap extends React.Component {
             lat: this.props.product.lat,
             lng: this.props.product.lng
           },
-          map: map,
-          title: "Buy here!"
+          map: googleMap,
+          title: i18next.t("buyHere", "Buy here!")
         });
       });
     }

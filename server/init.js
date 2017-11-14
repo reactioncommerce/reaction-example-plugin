@@ -6,6 +6,7 @@ import { registerSchema } from "/imports/plugins/core/collections/lib/registerSc
 import { Hooks, Reaction, Logger } from "/server/api";
 import { Product } from "/lib/collections/schemas";
 import BeesKneesPdpLayout from "../lib/layout/beesKneesPdpLayout";
+import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
@@ -23,14 +24,6 @@ function modifyCheckoutWorkflow() {
       "layout.$.label": "Review Order"
     }
   });
-}
-
-function addRolesToGroups() {
-  Logger.info("::: Adding about route permissions to groups");
-  Groups.update({},
-    { $addToSet: { permissions: "about" } },
-    { multi: true }
-  );
 }
 
 function changeLayouts(shopId, newLayout) {
@@ -101,7 +94,8 @@ function setProductLocation() {
  */
 Hooks.Events.add("afterCoreInit", () => {
   modifyCheckoutWorkflow();
-  addRolesToGroups();
+  Logger.info("::: Add permission for new route 'About us' for guest users.");
+  addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
   changeLayouts(Reaction.getShopId(), "coreLayoutBeesknees");
 
   extendProductSchema();
