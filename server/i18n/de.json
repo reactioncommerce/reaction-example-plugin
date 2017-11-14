@@ -3,7 +3,8 @@
   "ns": "beesknees",
   "translation": {
     "beesknees": {
-      "buyHere": "Artikel hier zu haben!"
+      "buyHere": "Artikel hier zu haben!",
+      "availableLocations": "In folgenden Filialen erhältlich"
     }
   }
 }]

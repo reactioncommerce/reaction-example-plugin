@@ -6,7 +6,7 @@ import { i18next } from "/client/api";
 class AvailabilityMap extends React.Component {
   static propTypes = {
     trackingId: PropTypes.string.isRequired
-  }
+  };
 
   componentDidMount() {
     if (this.props.trackingId) {
@@ -38,7 +38,7 @@ class AvailabilityMap extends React.Component {
   render() {
     return (
       <div>
-        <h3>Product available at the following stores</h3>
+        <h3>{i18next.t("availableLocations", "Available at the following stores")}</h3>
         <div className="map" ref="map"></div>
       </div>
     );

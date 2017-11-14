@@ -1,11 +1,11 @@
+import _ from "lodash";
 import { check } from "meteor/check";
 import { SimpleSchema } from "meteor/aldeed:simple-schema";
-
-import { Packages, Shops, Groups, Products } from "/lib/collections";
-import { registerSchema } from "/imports/plugins/core/collections/lib/registerSchema";
-import { Hooks, Reaction, Logger } from "/server/api";
+import { Packages, Shops, Products } from "/lib/collections";
 import { Product } from "/lib/collections/schemas";
-import BeesKneesPdpLayout from "../lib/layout/beesKneesPdpLayout";
+import { Hooks, Reaction, Logger } from "/server/api";
+import { registerSchema } from "/imports/plugins/core/collections/lib/registerSchema";
+import ProductDetailPageSimpleLayout from "/imports/plugins/included/product-detail-simple/lib/layout/simple";
 import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
@@ -42,6 +42,18 @@ function changeLayouts(shopId, newLayout) {
 function changeProductDetailPageLayout() {
   Logger.info("::: changing layouts of product detail page");
   // Customize default productDetailSimple page's layout
+  const customPdpLayout = _.cloneDeep(ProductDetailPageSimpleLayout());
+  customPdpLayout.forEach((item) => {
+    if (item.children) {
+      for (const child of item.children) {
+        if (child.component === "ProductMetadata") {
+          // Replace product metadata with our Google Maps component
+          child.component = "AvailabilityMap";
+        }
+      }
+    }
+  });
+
   Reaction.registerTemplate({
     name: "productDetailSimple",
     title: "Product Detail Simple Layout",
@@ -49,7 +61,7 @@ function changeProductDetailPageLayout() {
     templateFor: ["pdp"],
     permissions: ["admin", "owner"],
     audience: ["anonymous", "guest"],
-    template: BeesKneesPdpLayout()
+    template: customPdpLayout
   });
 }
 
