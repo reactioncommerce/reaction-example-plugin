@@ -1,6 +1,7 @@
 import { check } from "meteor/check";
-import { Packages, Shops, Groups } from "/lib/collections";
+import { Packages, Shops } from "/lib/collections";
 import { Hooks, Reaction, Logger } from "/server/api";
+import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
@@ -18,14 +19,6 @@ function modifyCheckoutWorkflow() {
       "layout.$.label": "Review Order"
     }
   });
-}
-
-function addRolesToGroups() {
-  Logger.info("::: Adding about route permissions to groups");
-  Groups.update({},
-    { $addToSet: { permissions: "about" } },
-    { multi: true }
-  );
 }
 
 function changeLayouts(shopId, newLayout) {
@@ -46,6 +39,7 @@ function changeLayouts(shopId, newLayout) {
  */
 Hooks.Events.add("afterCoreInit", () => {
   modifyCheckoutWorkflow();
-  addRolesToGroups();
+  Logger.info("::: Add permission for new route 'About us' for guest users.");
+  addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
   changeLayouts(Reaction.getShopId(), "coreLayoutBeesknees");
 });
