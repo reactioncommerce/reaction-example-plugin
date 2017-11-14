@@ -1,10 +1,10 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import classnames from "classnames";
 import Blaze from "meteor/gadicc:blaze-react-component";
-import {Template} from "meteor/templating";
+import { Template } from "meteor/templating";
 
-import {getComponent as assertComponent, registerComponent} from "/imports/plugins/core/components/lib";
+import { getComponent as assertComponent, registerComponent } from "/imports/plugins/core/components/lib";
 
 
 class CoreLayoutBeesknees extends Component {
@@ -39,7 +39,7 @@ class CoreLayoutBeesknees extends Component {
   }
 
   render() {
-    const {layoutHeader, layoutFooter, template} = this.props.structure || {};
+    const { layoutHeader, layoutFooter, template } = this.props.structure || {};
     const pageClassName = classnames({
       "page": true,
       "show-settings": this.props.actionViewIsOpen
