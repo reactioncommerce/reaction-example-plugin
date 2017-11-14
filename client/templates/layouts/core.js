@@ -19,7 +19,7 @@ class CoreLayoutBeesknees extends Component {
       if (name) {
         return assertComponent(name);
       }
-    } catch (e) {
+    } catch (error) {
       // No-op
     }
     return null;
