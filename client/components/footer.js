@@ -1,7 +1,7 @@
 import React from "react";
 
-import {replaceComponent} from "/imports/plugins/core/components/lib";
-import {Reaction} from "/client/api";
+import { replaceComponent } from "/imports/plugins/core/components/lib";
+import { Reaction } from "/client/api";
 
 const FooterBeesKnees = () => (
   <div className="reaction-navigation-footer footer-default">
