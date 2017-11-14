@@ -12,7 +12,7 @@ class CoreLayoutBeesknees extends Component {
     actionViewIsOpen: PropTypes.bool,
     data: PropTypes.object,
     structure: PropTypes.object
-  }
+  };
 
   getComponent(name) {
     try {
