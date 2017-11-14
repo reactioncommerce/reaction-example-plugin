@@ -1,10 +1,10 @@
-import {check} from "meteor/check";
-import {SimpleSchema} from "meteor/aldeed:simple-schema";
+import { check } from "meteor/check";
+import { SimpleSchema } from "meteor/aldeed:simple-schema";
 
-import {Packages, Shops, Groups, Products} from "/lib/collections";
-import {registerSchema} from "/imports/plugins/core/collections/lib/registerSchema";
-import {Hooks, Reaction, Logger} from "/server/api";
-import {Product} from "/lib/collections/schemas";
+import { Packages, Shops, Groups, Products } from "/lib/collections";
+import { registerSchema } from "/imports/plugins/core/collections/lib/registerSchema";
+import { Hooks, Reaction, Logger } from "/server/api";
+import { Product } from "/lib/collections/schemas";
 import BeesKneesPdpLayout from "../lib/layout/beesKneesPdpLayout";
 
 function modifyCheckoutWorkflow() {
@@ -28,8 +28,8 @@ function modifyCheckoutWorkflow() {
 function addRolesToGroups() {
   Logger.info("::: Adding about route permissions to groups");
   Groups.update({},
-    {$addToSet: {permissions: "about"}},
-    {multi: true}
+    { $addToSet: { permissions: "about" } },
+    { multi: true }
   );
 }
 
@@ -42,7 +42,7 @@ function changeLayouts(shopId, newLayout) {
     shop.layout[i].layout = newLayout;
   }
   return Shops.update(shopId, {
-    $set: {layout: shop.layout}
+    $set: { layout: shop.layout }
   });
 }
 
@@ -76,13 +76,13 @@ function extendProductSchema() {
       }
     }
   ]);
-  Products.attachSchema(ExtendedSchema, {replace: true, selector: {type: "simple"}});
+  Products.attachSchema(ExtendedSchema, { replace: true, selector: { type: "simple" } });
   registerSchema("Product", ExtendedSchema);
 }
 
 function setProductLocation() {
   Logger.info("::: Set location to product 'Basic Reaction product'");
-  Products.update({title: "Basic Reaction Product"}, {
+  Products.update({ title: "Basic Reaction Product" }, {
     $set: {
       lat: 34.0059084,
       lng: -118.4903684
