@@ -1,6 +1,7 @@
 import { check } from "meteor/check";
 import { Packages, Shops } from "/lib/collections";
 import { Hooks, Reaction, Logger } from "/server/api";
+import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
   // Replace checkoutReview with our custom Template
@@ -17,18 +18,6 @@ function modifyCheckoutWorkflow() {
       "layout.$.template": "checkoutReviewBeesknees",
       "layout.$.label": "Review Order"
     }
-  });
-}
-
-function addRolesToVisitors() {
-  // Add the about permission to all default roles since it's available to all
-  Logger.info("::: Adding about route permissions to default roles");
-  const shop = Shops.findOne(Reaction.getShopId());
-  Shops.update(shop._id, {
-    $addToSet: { defaultVisitorRole: "about" }
-  });
-  Shops.update(shop._id, {
-    $addToSet: { defaultRole: "about" }
   });
 }
 
@@ -50,6 +39,7 @@ function changeLayouts(shopId, newLayout) {
  */
 Hooks.Events.add("afterCoreInit", () => {
   modifyCheckoutWorkflow();
-  addRolesToVisitors();
+  Logger.info("::: Add permission for new route 'About us' for guest users.");
+  addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
   changeLayouts(Reaction.getShopId(), "coreLayoutBeesknees");
 });
