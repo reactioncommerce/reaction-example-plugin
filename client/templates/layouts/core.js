@@ -32,7 +32,7 @@ class CoreLayoutBeesknees extends Component {
       return React.createElement(mainComponent, {});
     } else if (Template[template]) {
       return (
-        <Blaze template={template} />
+        <Blaze template={template}/>
       );
     }
     return null;
@@ -53,17 +53,20 @@ class CoreLayoutBeesknees extends Component {
 
         {headerComponent && React.createElement(headerComponent, {})}
 
-        <Blaze template="cartDrawer" className="reaction-cart-drawer" />
+        <Blaze template="cartDrawer" className="reaction-cart-drawer"/>
 
         <main>
           <div className="rui beesknees">
             <div className="bkdebug"><em>{"Bee's Knees layout"}</em></div>
-            <div className="bkdebug"><em>{"layoutHeader component:"}</em> {this.props.structure.layoutHeader || "not applicable"}</div>
-            <div className="bkdebug"><em>{"layoutFooter component:"}</em> {this.props.structure.layoutFooter || "not applicable"}</div>
-            <div className="bkdebug"><em>main {this.getComponent(template) ? "component:" : "(Blaze template):"}</em> {template}</div>
+            <div className="bkdebug">
+              <em>{"layoutHeader component:"}</em> {this.props.structure.layoutHeader || "not applicable"}</div>
+            <div className="bkdebug">
+              <em>{"layoutFooter component:"}</em> {this.props.structure.layoutFooter || "not applicable"}</div>
+            <div className="bkdebug">
+              <em>main {this.getComponent(template) ? "component:" : "(Blaze template):"}</em> {template}</div>
           </div>
 
-          { this.renderMain() }
+          {this.renderMain()}
         </main>
 
         {footerComponent && React.createElement(footerComponent, {})}

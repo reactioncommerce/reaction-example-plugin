@@ -1,0 +1,10 @@
+[{
+  "i18n": "de",
+  "ns": "beesknees",
+  "translation": {
+    "beesknees": {
+      "buyHere": "Artikel hier zu haben!",
+      "availableLocations": "In folgenden Filialen erhältlich"
+    }
+  }
+}]

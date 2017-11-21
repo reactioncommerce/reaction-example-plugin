@@ -1,2 +1,1 @@
-import "./footer";
 import "./availabilityMap";
