@@ -7,7 +7,12 @@ const FooterBeesKnees = () => (
   <div className="reaction-navigation-footer footer-default">
     <nav className="navbar-bottom" role="navigation">
       <div className="row">
-        <a href={Reaction.Router.pathFor("about")}>About Us</a>
+        <a href="javascript: void(0)" onClick={() => {
+            const path = Reaction.Router.pathFor("about");
+            Reaction.Router.go(path);
+            return false;
+          }
+        }>About Us</a>
       </div>
     </nav>
   </div>
