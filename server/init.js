@@ -9,8 +9,9 @@ import ProductDetailPageSimpleLayout from "/imports/plugins/included/product-det
 import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
-  // Replace checkoutReview with our custom Template
-  Logger.info("::: Modifying checkout workflow");
+  // Replace workflow step checkoutReview with our custom template
+  // Modifications of *workflow steps* need to go into Packages collection
+  Logger.info("::: Modifying checkout workflow step 'Review'");
   Packages.update({
     name: "reaction-checkout",
     layout: {
@@ -26,10 +27,29 @@ function modifyCheckoutWorkflow() {
   });
 }
 
-function changeLayouts(shopId, newLayout) {
-  check(shopId, String);
+function setProductDetailPageFooter() {
+  // Modifications of *workflows* (contrary to workflow steps - see above)
+  // need to go into Shops collection
+  Logger.info("::: Set footer for product detail page workflow");
+  const shopId = Reaction.getShopId();
+  Shops.update({
+    _id: shopId,
+    layout: {
+      $elemMatch: {
+        "structure.template": "productDetailSimple"
+      }
+    }
+  }, {
+    $set: {
+      "layout.$.structure.layoutFooter": "Footer"
+    }
+  });
+}
+
+function changeLayouts(newLayout) {
   check(newLayout, String);
   Logger.info(`::: changing all layouts to ${newLayout}`);
+  const shopId = Reaction.getShopId();
   const shop = Shops.findOne(shopId);
   for (let i = 0; i < shop.layout.length; i++) {
     shop.layout[i].layout = newLayout;
@@ -108,8 +128,8 @@ Hooks.Events.add("afterCoreInit", () => {
   modifyCheckoutWorkflow();
   Logger.info("::: Add permission for new route 'About us' for guest users.");
   addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
-  changeLayouts(Reaction.getShopId(), "coreLayoutBeesknees");
-
+  changeLayouts("coreLayoutBeesknees");
+  setProductDetailPageFooter();
   extendProductSchema();
   setProductLocation();
   changeProductDetailPageLayout();
