@@ -1,0 +1,7 @@
+# things to ignore in lint
+
+*.min.*
+server/plugins.js
+client/plugins.js
+packages/*
+.reaction/jsdoc/templates/*

@@ -1,14 +1,29 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { DocHead } from "meteor/kadira:dochead";
+import loadScript from "load-script";
 import { $ } from "meteor/jquery";
 import { i18next } from "/client/api";
 
 
 class AvailabilityMap extends React.Component {
   static propTypes = {
+    product: PropTypes.object,
     trackingId: PropTypes.string.isRequired
   };
+
+  componentDidMount() {
+    if (this.props.trackingId) {
+      if ($("#mapsHead").length === 0) {
+        const url = `https://maps.googleapis.com/maps/api/js?key=${this.props.trackingId}`;
+        loadScript(url, { attrs: { id: "mapsHead" } }, () => {
+          // DocHead.loadScript(url, { attrs: { id: "mapsHead" } }, () => {
+          this.renderMap();
+        });
+      } else {
+        this.renderMap();
+      }
+    }
+  }
 
   renderMap() {
     // eslint-disable-next-line no-undef, no-new
@@ -29,19 +44,6 @@ class AvailabilityMap extends React.Component {
       map: googleMap,
       title: i18next.t("buyHere", "Buy here!")
     });
-  }
-
-  componentDidMount() {
-    if (this.props.trackingId) {
-      if ($("#mapsHead").length === 0) {
-        const url = `https://maps.googleapis.com/maps/api/js?key=${this.props.trackingId}`;
-        DocHead.loadScript(url, { attrs: { id: "mapsHead" } }, () => {
-          this.renderMap();
-        });
-      } else {
-        this.renderMap();
-      }
-    }
   }
 
   render() {
