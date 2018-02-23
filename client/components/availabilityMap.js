@@ -16,7 +16,6 @@ class AvailabilityMap extends React.Component {
       if ($("#mapsHead").length === 0) {
         const url = `https://maps.googleapis.com/maps/api/js?key=${this.props.trackingId}`;
         loadScript(url, { attrs: { id: "mapsHead" } }, () => {
-          // DocHead.loadScript(url, { attrs: { id: "mapsHead" } }, () => {
           this.renderMap();
         });
       } else {
