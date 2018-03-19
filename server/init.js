@@ -1,6 +1,6 @@
 import _ from "lodash";
 import { check } from "meteor/check";
-import { SimpleSchema } from "meteor/aldeed:simple-schema";
+import SimpleSchema from "simpl-schema";
 import { Packages, Shops, Products } from "/lib/collections";
 import { Product } from "/lib/collections/schemas";
 import { Hooks, Reaction, Logger } from "/server/api";
@@ -87,20 +87,18 @@ function changeProductDetailPageLayout() {
 
 function extendProductSchema() {
   Logger.info("::: Add location coordinates to simple product schema");
-  const ExtendedSchema = new SimpleSchema([Product,
+  const ExtendedSchema = Product.clone().extend(
     {
       lat: {
         optional: true,
-        type: Number,
-        decimal: true
+        type: Number
       },
       lng: {
         optional: true,
-        type: Number,
-        decimal: true
+        type: Number
       }
     }
-  ]);
+  );
   Products.attachSchema(ExtendedSchema, { replace: true, selector: { type: "simple" } });
   registerSchema("Product", ExtendedSchema);
 }

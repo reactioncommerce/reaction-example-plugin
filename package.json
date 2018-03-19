@@ -1,0 +1,37 @@
+{
+  "name": "reaction-example-plugin",
+  "version": "1.0.0",
+  "description": "These files are for the fictional store Bee's Knees, a manufacturer of infant clothes specializing in garments made from organically grown cotton.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reactioncommerce/reaction-example-plugin.git"
+  },
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/reactioncommerce/reaction-example-plugin/issues"
+  },
+  "homepage": "https://github.com/reactioncommerce/reaction-example-plugin#readme",
+  "dependencies": {
+    "load-script": "^1.0.0"
+  },
+  "devDependencies": {
+    "@reactioncommerce/eslint-config": "^1.0.1",
+    "eslint": "^4.18.1",
+    "eslint-config-react-tools": "^1.1.2",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0"
+  },
+  "eslintConfig": {
+    "extends": "@reactioncommerce",
+    "globals": {
+      "Assets": true,
+      "Package": true,
+      "FS": true,
+      "Alerts": true
+    }
+  }
+}
