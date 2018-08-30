@@ -3,10 +3,11 @@ import { check } from "meteor/check";
 import SimpleSchema from "simpl-schema";
 import { Packages, Shops, Products } from "/lib/collections";
 import { Product } from "/lib/collections/schemas";
-import { Hooks, Reaction, Logger } from "/server/api";
-import { registerSchema } from "/imports/plugins/core/collections/lib/registerSchema";
+import Hooks from "@reactioncommerce/hooks";
+import Logger from "@reactioncommerce/logger";
+import Reaction from "/imports/plugins/core/core/server/Reaction";
+import { registerSchema } from "@reactioncommerce/schemas";
 import ProductDetailPageSimpleLayout from "/imports/plugins/included/product-detail-simple/lib/layout/simple";
-import { addRolesToGroups } from "/server/api/core/addDefaultRoles";
 
 function modifyCheckoutWorkflow() {
   // Replace workflow step checkoutReview with our custom template
@@ -125,7 +126,7 @@ function setProductLocation() {
 Hooks.Events.add("afterCoreInit", () => {
   modifyCheckoutWorkflow();
   Logger.info("::: Add permission for new route 'About us' for guest users.");
-  addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
+  Reaction.addRolesToGroups({ allShops: true, roles: ["about"], shops: [], groups: ["guest"] });
   changeLayouts("coreLayoutBeesknees");
   setProductDetailPageFooter();
   extendProductSchema();
